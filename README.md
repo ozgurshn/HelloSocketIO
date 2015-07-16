@@ -1,10 +1,15 @@
 # HelloSocketIO
 An example chat application to connect SocketIO server using Swift.
 
+![alt tag](https://github.com/ozgurshn/HelloSocketIO/blob/master/HelloSocketIO/Ekran%20Resmi%202015-07-16%2018.46.09.png)
+
+
+
 It is developed on https://github.com/socketio/socket.io-client-swift
 
 
 It sends message to local hosted server and gets server response.
+
 
 There is server code under /Server folder.
  
@@ -13,6 +18,8 @@ You shoud install Node.JS unless you have.
 And then call the command belov in onder to populate dependencies.
 
 ```npm install --save express@4.10.2```
+
+![alt tag](https://github.com/ozgurshn/HelloSocketIO/blob/master/HelloSocketIO/Ekran%20Resmi%202015-07-16%2018.46.17.png)
 
 The code in Index.Js basically runs server that listens 3000 port. The server logs when user connected and responds when it gets "chatMessage" event.
 
