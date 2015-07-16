@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cj9-IY-nAT">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gD2-9t-S4z">
+            <objects>
+                <viewController id="cj9-IY-nAT" customClass="ViewController" customModule="HelloSocketIO" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tEL-3Z-qVN"/>
+                        <viewControllerLayoutGuide type="bottom" id="MVl-Zv-Q8s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EOC-R0-IJE" customClass="View">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ekp-3c-l8r">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTS-HE-XTy">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendMessage:" destination="cj9-IY-nAT" eventType="touchUpInside" id="jf9-pV-ODE"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mEr-1h-9Jb">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="407" id="xA5-IV-GEK"/>
+                                </constraints>
+                                <color key="textColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="xA5-IV-GEK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="xA5-IV-GEK"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UTS-HE-XTy" firstAttribute="top" secondItem="ekp-3c-l8r" secondAttribute="bottom" constant="8" id="0jJ-d6-pgf"/>
+                            <constraint firstItem="ekp-3c-l8r" firstAttribute="top" secondItem="tEL-3Z-qVN" secondAttribute="bottom" constant="19" id="4zd-Uf-XIg"/>
+                            <constraint firstItem="mEr-1h-9Jb" firstAttribute="top" secondItem="UTS-HE-XTy" secondAttribute="bottom" constant="8" id="6vg-8T-nwg"/>
+                            <constraint firstAttribute="width" secondItem="mEr-1h-9Jb" secondAttribute="width" id="Bg6-id-o9a"/>
+                            <constraint firstItem="mEr-1h-9Jb" firstAttribute="leading" secondItem="EOC-R0-IJE" secondAttribute="leading" id="EKH-iY-7tk"/>
+                            <constraint firstItem="ekp-3c-l8r" firstAttribute="leading" secondItem="EOC-R0-IJE" secondAttribute="leading" constant="16" id="JNX-qm-vuS"/>
+                            <constraint firstAttribute="trailing" secondItem="ekp-3c-l8r" secondAttribute="trailing" constant="16" id="jLt-3O-Dcj"/>
+                            <constraint firstItem="UTS-HE-XTy" firstAttribute="leading" secondItem="ekp-3c-l8r" secondAttribute="leading" id="w0w-9a-xZb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ekp-3c-l8r"/>
+                                <exclude reference="UTS-HE-XTy"/>
+                                <exclude reference="mEr-1h-9Jb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="4zd-Uf-XIg"/>
+                                <exclude reference="JNX-qm-vuS"/>
+                                <exclude reference="jLt-3O-Dcj"/>
+                                <exclude reference="0jJ-d6-pgf"/>
+                                <exclude reference="w0w-9a-xZb"/>
+                                <exclude reference="6vg-8T-nwg"/>
+                                <exclude reference="Bg6-id-o9a"/>
+                                <exclude reference="EKH-iY-7tk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ekp-3c-l8r"/>
+                                <include reference="UTS-HE-XTy"/>
+                                <include reference="mEr-1h-9Jb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="4zd-Uf-XIg"/>
+                                <include reference="JNX-qm-vuS"/>
+                                <include reference="jLt-3O-Dcj"/>
+                                <include reference="0jJ-d6-pgf"/>
+                                <include reference="w0w-9a-xZb"/>
+                                <include reference="6vg-8T-nwg"/>
+                                <include reference="Bg6-id-o9a"/>
+                                <include reference="EKH-iY-7tk"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="textField" destination="ekp-3c-l8r" id="utT-du-fQ3"/>
+                        <outlet property="textView" destination="mEr-1h-9Jb" id="fQY-Ze-9aX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gm6-PS-RDx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-396" y="120.75"/>
+        </scene>
+    </scenes>
+</document>
